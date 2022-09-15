@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    {{props.data.id}}
+    {{props.data.id}}测试代码
   </div>
 </template>
 <script setup>
