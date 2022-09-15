@@ -1,0 +1,1 @@
+import{_ as t,o as _,c as s,t as c}from"./index.3115f6e8.js";const o={class:"layout_center"},n={__name:"center",props:{msg:String},setup(r){return(e,a)=>(_(),s("div",o,c(e.\u4E2D\u95F4),1))}},d=t(n,[["__scopeId","data-v-16b4d277"]]);export{d as default};
