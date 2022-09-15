@@ -35,6 +35,12 @@ onMounted(() => {
     ev.preventDefault()
   }
   window.gisManager = new GisManager()
+  window.onmessage = (e) => {
+    console.log(e.data)
+    if (e.data.addlayer === '散点') {
+      store.setHighLight('吃在丽江')
+    }
+  }
 })
 
 /**

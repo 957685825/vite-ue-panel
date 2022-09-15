@@ -21,5 +21,9 @@ console.log(props)
 <style lang="less">
 .text {
   color: #fff;
+  position: absolute;
+  background: red;
+  width: 300px;
+  height: 200px;
 }
 </style>
