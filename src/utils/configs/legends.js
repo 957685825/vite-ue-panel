@@ -1,35 +1,95 @@
 export default {
-  综合概览: [
-    {
-      name: '企业',
-      imgUrl: './img/legend/企业.png',
-      highlight: false
-    },
-    {
-      name: '水质检测站点',
-      imgUrl: './img/legend/水质检测站点.png',
-      highlight: false
-    },
-    {
-      name: '排污检测站点',
-      imgUrl: './img/legend/排污检测站点.png',
-      highlight: false
-    },
-    {
-      name: '执法人员',
-      imgUrl: './img/legend/执法人员.png',
-      highlight: false
-    }
+  平阳全景: [
+    // {
+    //   name: '企业',
+    //   imgUrl: './img/legend/企业.png',
+    //   highlight: false
+    // },
+    // {
+    //   name: '水质检测站点',
+    //   imgUrl: './img/legend/水质检测站点.png',
+    //   highlight: false
+    // },
+    // {
+    //   name: '排污检测站点',
+    //   imgUrl: './img/legend/排污检测站点.png',
+    //   highlight: false
+    // },
+    // {
+    //   name: '执法人员',
+    //   imgUrl: './img/legend/执法人员.png',
+    //   highlight: false
+    // }
   ],
-  行业管理: [
+  城市治理: [
     {
-      name: '水质检测站点',
-      imgUrl: './img/legend/水质检测站点.png',
+      name: '平阳县网格',
+      imgUrl: './img/legend/平阳县网格.png',
       highlight: false
     },
     {
-      name: '排污检测站点',
-      imgUrl: './img/legend/排污检测站点.png',
+      name: '镇(街)道网格',
+      imgUrl: './img/legend/街道网格.png',
+      highlight: false
+    },
+    {
+      name: '村(社区)网格',
+      imgUrl: './img/legend/村社网格.png',
+      highlight: false
+    },
+    {
+      name: '全科网格',
+      imgUrl: './img/legend/全科网格.png',
+      highlight: false
+    },
+    {
+      name: '微网格',
+      imgUrl: './img/legend/微网格.png',
+      highlight: false
+    },
+    {
+      name: '事件热力图',
+      imgUrl: './img/legend/事件热力图.png',
+      highlight: false
+    },
+    {
+      name: '无人机',
+      imgUrl: './img/legend/无人机.png',
+      highlight: false
+    },
+    {
+      name: '视频监控',
+      imgUrl: './img/legend/视频监控.png',
+      highlight: false
+    },
+    {
+      name: '城市部件',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    },
+    {
+      name: 'AI摄像头',
+      imgUrl: './img/legend/AI摄像头.png',
+      highlight: false
+    },
+    {
+      name: '网格员',
+      imgUrl: './img/legend/网格员.png',
+      highlight: false
+    },
+    {
+      name: '渣土车辆',
+      imgUrl: './img/legend/渣土车辆.png',
+      highlight: false
+    },
+    {
+      name: '告警点位',
+      imgUrl: './img/legend/告警点位.png',
+      highlight: false
+    },
+    {
+      name: '工单点位',
+      imgUrl: './img/legend/工单点位.png',
       highlight: false
     }
   ]

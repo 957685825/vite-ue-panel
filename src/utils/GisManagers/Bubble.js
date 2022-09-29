@@ -38,8 +38,9 @@ export default class Bubble extends GisBase {
       'type',
       'legend',
     ]);
-    item.valueMax = _.max(data, 'value').value * 1.1;
-    item.valueMin = 0;
+    // item.valueMax = _.max(data, 'value').value * 1.1;
+    item.valueMax = 10000
+    item.valueMin = 10;
     super.copyObject(item, layerConfig, ['valueMax', 'valueMin']);
     window.appInstance.uniCall('addBubbleLayer', item, (res) => {
       callback && callback(res.result);

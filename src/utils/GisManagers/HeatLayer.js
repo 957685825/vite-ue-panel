@@ -9,6 +9,7 @@ export default class HeatLayer extends GisBase {
   config = {
     coordType: 0,
     coordTypeZ: 0,
+    visible: true
   };
   /**
    * 添加热力图图层
@@ -29,7 +30,7 @@ export default class HeatLayer extends GisBase {
     ]);
     let scatterData = super.selectArray(data, ['coord', 'value']);
     item.valueMax = _.max(data, 'value').value * 1.1;
-    item.valueMin = 0;
+    item.valueMin = 20;
     super.copyObject(item, layerConfig, ['valueMax', 'valueMin']);
 
     //散点多时分批添加

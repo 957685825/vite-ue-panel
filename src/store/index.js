@@ -5,7 +5,7 @@ export const uesStore = defineStore({
     highLight: '', // 设置当前卡片的高亮
     isAppInstance: false, // 存储当前场景是否加载完成
     topic: '', // 记录当前主题
-    sceneName: 'LiJiang-L0' // 记录当前场景
+    sceneName: 'DXWZPY-L0' // 记录当前场景
   }),
   getters: {
 

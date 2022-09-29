@@ -6,7 +6,7 @@ import right from '../view/ZongHeGaiLan/right.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/ZhongHeGaiLan'
+    redirect: '/PingYangQuanJing'
   },
   // {
   //   path: '/ZhongHeGaiLan',
@@ -17,29 +17,29 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../components/HelloWorld.vue'),
   // },
   {
-    path: '/ZhongHeGaiLan',
+    path: '/PingYangQuanJing',
     meta: {
-      cname: '综合概览',
+      cname: '平阳全景',
       left: left,
       right: right
     },
     // component: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/ZongHeGaiLan/left.vue'),
     components: {
       default: right,
-      left: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/ZongHeGaiLan/left.vue'),
-      center: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/ZongHeGaiLan/center.vue'),
-      right: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/ZongHeGaiLan/right.vue')
+      left: () => import(/* webpackChunkName: "PingYangQuanJing" */ '../view/ZongHeGaiLan/left.vue'),
+      center: () => import(/* webpackChunkName: "PingYangQuanJing" */ '../view/ZongHeGaiLan/center.vue'),
+      right: () => import(/* webpackChunkName: "PingYangQuanJing" */ '../view/ZongHeGaiLan/right.vue')
     }
   },
   {
-    path: '/HangYeGuanLi',
+    path: '/ChengShiZhiLi',
     meta: {
-      cname: '行业管理'
+      cname: '城市治理'
     },
     components: {
-      left: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/HangYeGuanLi/left.vue'),
-      center: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/HangYeGuanLi/center.vue'),
-      right: () => import(/* webpackChunkName: "ZongHeGaiLan" */ '../view/HangYeGuanLi/right.vue')
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
     }
   }
 ]

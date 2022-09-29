@@ -1,1 +1,0 @@
-import{_ as e,o as _,c as t}from"./index.f960b56f.js";const c={},o={class:"layout_left"};function s(n,a){return _(),t("div",o)}const r=e(c,[["render",s],["__scopeId","data-v-37c43022"]]);export{r as default};

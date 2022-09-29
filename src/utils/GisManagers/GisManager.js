@@ -447,20 +447,20 @@ class gisManager {
 
   markerIds = [];
   addTopicDefault() {
-    if (store.state.isStreaming) {
+    if (this.store.$state.isAppInstance) {
       //特效
       this.markerIds &&
         this.markerIds.forEach((id) => {
-          this.model.remove3DMarker(id);
-        });
-      if (window.currentLayer.defaultMarkers) {
+          this.model.remove3DMarker(id)
+        })
+      if (window.layerContral.defaultMarkers) {
         this.markerIds = [];
-        let config = window.currentLayer.defaultMarkers;
+        let config = window.layerContral.defaultMarkers
         GisDataManager.getJsonData(config.jsonPath, (data) => {
           data.forEach((item) => {
             const { name, lon, lat, type } = item;
             config.id = name;
-            config.coord = [lon, lat];
+            config.coord = [Number(lon), Number(lat)];
             if (type) {
               config.type = type;
             }
@@ -472,15 +472,16 @@ class gisManager {
       //区县地标
 
       this.currentQX && this.gisBase.removeLayer(this.currentQX);
-      if (window.currentLayer.defaultLayer) {
-        this.currentQX = window.currentLayer.defaultLayer;
+      if (window.layerContral.defaultLayer) {
+        this.currentQX = window.layerContral.defaultLayer;
         this.currentQX.legends = [];
-        GisDataManager.getQXData(this.currentQX, (data) => {
+        GisDataManager.getData(this.currentQX, (data) => {
           data.forEach((item) => {
+            console.log(item)
             this.currentQX.legends.push({
-              name: item.name,
-              color: '#ffff',
-              iconName: 'site_02',
+              name: item.type,
+              color: '#fff0',
+              iconName: item.type,
             });
           });
           this.landmarkLayer.addLayer(this.currentQX, data);

@@ -68,7 +68,7 @@ export default class BaseGisData {
         const { lon, lat, alt, name, type, value } = item
         const dataItem = {
           id: layer.id + index,
-          type: (layer.legend && layer.legend.name) || type || '',
+          type: layer.legend?.name || type || name || '',
           coord: [Number(lon), Number(lat)],
           coordZ: layer.coordZ || alt || 0,
           label: layer.isShowLabel ? name : '',
@@ -85,6 +85,29 @@ export default class BaseGisData {
         })
       }
       callback && callback(data)
+    })
+  }
+
+  /** 获取轨迹数据 */
+  static getTrailData (layer, callback) {
+    const res = apiGet(layer.jsonPath)
+    res.then((data) => {
+      const timeGroup = _.groupBy(data, 'time')
+      const allData = []
+      for (const key in timeGroup) {
+        const group = []
+        timeGroup[key].forEach((point) => {
+          group.push({
+            id: point.bh,
+            label: '',
+            coord: [point.lon, point.lat],
+            coordZ: layer.coordZ || 0,
+            type: (layer.legend && layer.legend.name) || type || ''
+          })
+        })
+        allData.push(group)
+      }
+      callback && callback(allData)
     })
   }
 }

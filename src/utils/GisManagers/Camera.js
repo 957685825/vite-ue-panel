@@ -165,8 +165,8 @@ export default class Camera extends GisBase {
           coordTypeZ: 0,
           limitYaw: [0, 359],
           limitPitch: [5, 89],
-          limitCoordZ: [10, 1000000],
-          limitDistance: [1600, 1000000],
+          limitCoordZ: [10, 50000],
+          limitDistance: [1600, 50000],
           radius: 1000000,
         };
         window.appInstance.uniCall('restrictCamera', jsonData, (res1) => {

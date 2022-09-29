@@ -25,8 +25,9 @@ onMounted(() => {
 const onSceneInit = () => {
   console.log('当前场景加载完成')
   store.setAppInstance(true)
-  window.gisManager.camera.restrictCamera()
+  // window.gisManager.camera.restrictCamera()
   window.gisManager.selectMenu(window.layerContral.defaultView)
+  window.gisManager.addTopicDefault()
 }
 
 // 监听当前场景切换完成后设置相机位置
@@ -37,6 +38,7 @@ const onSceneSwitch = () => {
   window.gisManager.camera.restrictCamera()
   const cameraInfo = window.layerContral.cameraList.get(window.layerContral.defaultView.cameraName)
   window.gisManager.camera.setCamera(cameraInfo)
+  window.gisManager.addTopicDefault()
 }
 // ue事件监听
 const registerMessage = () => {

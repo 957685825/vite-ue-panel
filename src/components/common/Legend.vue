@@ -27,6 +27,7 @@ const showLegendList = ref([])
 const initTopicLayerList = async (val = store.$state.topic) => {
   legendList.value.forEach((item) => (item.highlight = false))
   showLayerList = []
+  console.log(window.layerContral.cardNames[val].cardShowLegends)
   showLegendList.value = window.layerContral.cardNames[val].cardShowLegends
   legendList.value.forEach(item => {
     showLegendList.value.forEach(showLayer => {
@@ -109,6 +110,7 @@ watch(
       if (store.$state.highLight) {
         store.setHighLight(val)
       }
+      console.log(store.sceneName, window.layerContral.defaultView.sceneName)
       if (store.sceneName !== window.layerContral.defaultView.sceneName) {
         InitLayer().then(() => {
           window.gisManager.selectMenu(window.layerContral.defaultView)
@@ -143,7 +145,7 @@ watch(
 )
 </script>
 <template>
-  <div class="legend_warper">
+  <div class="legend_warper" v-show="legendList?.value?.length > 0">
     <div class="legend_list">
       <div
         class="legned_item"
@@ -166,11 +168,11 @@ watch(
 .legend_warper {
   display: flex;
   justify-content: space-between;
-  background: rgba(23, 36, 53, 0.6);
-  border-top: solid 1px #29e4f5;
+  background: rgba(102, 76, 0, 0.6);
+  border-top: solid 1px #F5BE43;
   padding: 10px 20px 1px;
   .legend_list {
-    width: 160px;
+    width: 320px;
     box-sizing: border-box;
     pointer-events: all;
     display: flex;

@@ -1,8 +1,16 @@
-// import apiGet from '../Api'
-import ZHGLGisData from './ZHGLGisData'
-import HYGLGisData from './HYGLGisData'
+import apiGet from '../Api'
+import PYQJGisData from './PYQJGisData'
+import CSZLGisData from './CSZLGisData'
 import { uesStore } from '../../store'
 export default class GisDataManager {
+  static getJsonData = async (url, callback) => {
+    const data = apiGet(url)
+    data.then(res => {
+      console.log(res)
+      callback && callback(res)
+    })
+  }
+
   static getData = async (layer, callback) => {
     // 获取主题数据
     this.getTopicData(layer, callback)
@@ -12,11 +20,11 @@ export default class GisDataManager {
   static getTopicData = async (layer, callback) => {
     const store = uesStore()
     switch (store.$state.topic) {
-      case '综合概览':
-        ZHGLGisData.getData(layer, callback)
+      case '平阳全景':
+        PYQJGisData.getData(layer, callback)
         break
-      case '行业管理':
-        HYGLGisData.getData(layer, callback)
+      case '城市治理':
+        CSZLGisData.getData(layer, callback)
         break
     }
   }

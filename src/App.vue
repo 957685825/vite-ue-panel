@@ -1,13 +1,14 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import Nav from './components/common/Nav.vue'
-import Header from '@/components/common/Header.vue'
+// import Header from '@/components/common/Header.vue'
 import Streaming from '@/view/Streaming.vue'
 import Legend from './components/common/Legend.vue'
 import LayerContral from './utils/configs/layerContral'
 import GisManager from './utils/GisManagers/GisManager'
 import { useRouter } from 'vue-router'
 import { uesStore } from './store'
+import IframeHooks from './utils/hooks/iframeHooks'
 const scale = ref(0)
 const store = uesStore()
 const layerContral = new LayerContral()
@@ -35,12 +36,14 @@ onMounted(() => {
     ev.preventDefault()
   }
   window.gisManager = new GisManager()
-  window.onmessage = (e) => {
-    console.log(e.data)
-    if (e.data.addlayer === '散点') {
-      store.setHighLight('吃在丽江')
-    }
-  }
+  // window.onmessage = (e) => {
+  //   console.log(e.data)
+  //   if (e.data.addlayer === '散点') {
+  //     store.setHighLight('吃在丽江')
+  //   }
+  // }
+  const hooks = new IframeHooks()
+  hooks.init()
 })
 
 /**
@@ -48,9 +51,11 @@ onMounted(() => {
  * 根据主题拿到对应的图层配置
  */
 const router = useRouter()
+// console.log(router)
 watch(
   () => router.currentRoute.value,
   (val) => {
+    console.log(val)
     initMap(val.meta.cname)
   },
   { deep: true }
@@ -81,11 +86,11 @@ const initMap = (val) => {
     }"
   >
     <Nav></Nav>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="legend_pos">
       <Legend></Legend>
     </div>
-    <transition
+    <!-- <transition
       name="animate__animated animate__bounce"
       enter-active-class="animate__bounceInLeft"
       leave-active-class="animate__bounceOutLeft"
@@ -111,7 +116,7 @@ const initMap = (val) => {
       mode="out-in"
     >
       <router-view name="right"></router-view>
-    </transition>
+    </transition> -->
   </div>
 </template>
 
@@ -130,7 +135,7 @@ const initMap = (val) => {
 }
 .screen {
   position: absolute;
-  background: url(./assets/img/layout/mask.png) no-repeat center center;
+  // background: url(./assets/img/layout/mask.png) no-repeat center center;
   left: 50%;
   top: 50%;
   z-index: 2;
@@ -145,8 +150,8 @@ const initMap = (val) => {
   }
   .legend_pos {
     position: absolute;
-    bottom: 40px;
-    right: 920px;
+    bottom: 20px;
+    right: 850px;
     z-index: 100;
   }
 }

@@ -1,30 +1,30 @@
 export default new Map([
   [
-    '综合概览',
+    '平阳全景',
     {
-      centerCoord: [100.44711487634, 26.64108537574],
+      centerCoord: [120.40604569883, 27.64612033252],
       coordType: 0,
       coordTypeZ: 0,
-      coordZ: 0,
-      distance: 127252,
+      coordZ: 816.60427246094,
+      distance: 50000,
       fov: 90,
-      heading: 12,
-      pitch: 12,
+      heading: 347,
+      pitch: 27,
       fly: true,
       duration: 1
     }
   ],
   [
-    '行业管理',
+    '城市治理',
     {
-      centerCoord: [100.22767039877, 26.87783182468],
+      centerCoord: [120.55624297566, 27.60277832107],
       coordType: 0,
       coordTypeZ: 0,
-      coordZ: -427.7,
-      distance: 3196,
+      coordZ: 10,
+      distance: 4012,
       fov: 90,
-      heading: 38,
-      pitch: 13,
+      heading: 46,
+      pitch: 35,
       fly: true,
       duration: 1
     }

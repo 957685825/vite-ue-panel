@@ -8,15 +8,20 @@
   </head>
   <body>
    
-    <script type="module" src="/src/main.js"></script>
-    <button onclick="postFun()">添加散点</button>
-    <iframe id="myFrame" src="http://localhost:5174/#/ZhongHeGaiLan" frameborder="0"></iframe>
+    <!-- <script type="module" src="/src/main.js"></script> -->
+    <button onclick="postFun()">综合概览</button>
+    <button onclick="postFun2()">行业管理</button>
+    <iframe id="myFrame" src="http://10.56.210.247:5173/#/ZhongHeGaiLan" frameborder="0"></iframe>
   </body>
 </html>
 <script>
   let frame = document.getElementById('myFrame').contentWindow
+  console.log(frame)
   const postFun = () => {
-    frame.postMessage({addlayer: '散点',isShow: true}, "*")
+    frame.postMessage({topic: '综合概览', path: '/ZhongHeGaiLan',isShow: true}, "*")
+  }
+  const postFun2 = () => {
+    frame.postMessage({topic: '行业管理', path: '/HangYeGuanLi',isShow: true}, "*")
   }
   
 </script>
