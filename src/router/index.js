@@ -41,6 +41,28 @@ const routes = [
       center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
       right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
     }
+  },
+  {
+    path: '/JingJiYunXing',
+    meta: {
+      cname: '经济运行'
+    },
+    components: {
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
+    }
+  },
+  {
+    path: '/ChengShiZhiGuan',
+    meta: {
+      cname: '城市智管'
+    },
+    components: {
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
+    }
   }
 ]
 

@@ -12,7 +12,7 @@ defineProps({
 <template>
   <div class="layout_left">
     <div class="chizailijiang">
-      <HighLight val="吃在丽江">
+      <HighLight val="全省GDP排名">
         <FirstLevelTitle val="吃在丽江"></FirstLevelTitle>
       </HighLight>
       <div class="canyinresou">

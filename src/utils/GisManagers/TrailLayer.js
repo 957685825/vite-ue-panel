@@ -64,7 +64,7 @@ export default class TrailLayer extends GisBase {
     window.appInstance.uniCall('addTrailLayer', item, (res) => {
       callBack && callBack(res.result);
       console.log('添加轨迹图图层', res, layerConfig);
-      this.setLayerClick(layerConfig);
+      // this.setLayerClick(layerConfig);
     });
     return item;
   }

@@ -94,6 +94,7 @@ export default class BaseGisData {
     res.then((data) => {
       const timeGroup = _.groupBy(data, 'time')
       const allData = []
+      console.log(timeGroup)
       for (const key in timeGroup) {
         const group = []
         timeGroup[key].forEach((point) => {
@@ -108,6 +109,58 @@ export default class BaseGisData {
         allData.push(group)
       }
       callback && callback(allData)
+    })
+  }
+
+  /** 获取路径数据 */
+  static getPathData (layer, callback) {
+    const res = apiGet(layer.jsonPath)
+    res.then((t) => {
+      t = t.filter((item) => {
+        // const { points } = item
+        // return points ? item : null
+        return item
+      })
+
+      const data = {}
+      data.children = []
+      layer.children = []
+
+      t.forEach((item) => {
+        const { id, points } = item
+        const pathData = {
+          id: id,
+          points: points.map((p) => {
+            return { coord: p, coordZ: layer.coordZ || 0 }
+          }),
+          sourceData: item
+        }
+        // 数据
+        data.children.push({ path: pathData })
+        // 图层
+
+        const temp = this.copyObject(layer, {}, [
+          'id',
+          'name',
+          'layerType',
+          'type',
+          'color',
+          'colorPass',
+          'width',
+          'isClick'
+        ])
+        temp.id = layer.id + id
+        temp.name = layer.id + id
+        layer.children.push(temp)
+
+        if (layer.isClick) {
+          this.layerDataDic.set(temp.id, {
+            scatterType: layer.scatterType,
+            data: pathData
+          })
+        }
+      })
+      callback && callback(data)
     })
   }
 }

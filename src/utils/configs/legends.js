@@ -1,26 +1,5 @@
 export default {
-  平阳全景: [
-    // {
-    //   name: '企业',
-    //   imgUrl: './img/legend/企业.png',
-    //   highlight: false
-    // },
-    // {
-    //   name: '水质检测站点',
-    //   imgUrl: './img/legend/水质检测站点.png',
-    //   highlight: false
-    // },
-    // {
-    //   name: '排污检测站点',
-    //   imgUrl: './img/legend/排污检测站点.png',
-    //   highlight: false
-    // },
-    // {
-    //   name: '执法人员',
-    //   imgUrl: './img/legend/执法人员.png',
-    //   highlight: false
-    // }
-  ],
+  平阳全景: [],
   城市治理: [
     {
       name: '平阳县网格',
@@ -89,6 +68,60 @@ export default {
     },
     {
       name: '工单点位',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '菜市场',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    }
+  ],
+  经济运行: [
+    {
+      name: '公交车',
+      imgUrl: './img/legend/告警点位.png',
+      highlight: false
+    },
+    {
+      name: '公交站点',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '客运站点',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '104国道交通流量',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '视频监控',
+      imgUrl: './img/legend/视频监控.png',
+      highlight: false
+    },
+    {
+      name: '客运站布局',
+      imgUrl: './img/legend/视频监控.png',
+      highlight: false
+    },
+    {
+      name: '货运站布局',
+      imgUrl: './img/legend/视频监控.png',
+      highlight: false
+    }
+  ],
+  城市智管: [
+    {
+      name: '公交车',
+      imgUrl: './img/legend/告警点位.png',
+      highlight: false
+    },
+    {
+      name: '公交站点',
       imgUrl: './img/legend/工单点位.png',
       highlight: false
     }

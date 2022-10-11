@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     城市治理: {
-      cardShowLegends: ['平阳县网格', '镇(街)道网格', '村(社区)网格', '全科网格', '微网格', '事件热力图', '无人机', '视频监控', '城市部件', 'AI摄像头', '工单点位', '告警点位'],
+      cardShowLegends: ['平阳县网格', '镇(街)道网格', '村(社区)网格', '全科网格', '微网格', '事件热力图', '无人机', '视频监控', '城市部件', 'AI摄像头', '工单点位', '告警点位', '渣土车辆', '网格员'],
       cardShowLayers: []
     }
   },
@@ -189,8 +189,8 @@ export default {
         coordZ: 0,
         jsonPath: './data/ChengShiZhiLi/告警点位.json',
         layerName: '气泡-告警点位',
-        speed: 200,
-        radiusMax: 200,
+        speed: 100,
+        radiusMax: 5500,
         radiusMin: 100,
         legend: {
           name: 'legend01',
@@ -200,21 +200,63 @@ export default {
     ],
     渣土车辆: [
       {
-        id: '轨迹图-重点车辆',
-        name: '轨迹图-重点车辆',
-        layerType: '轨迹图',
+        id: '散点-渣土车辆',
+        layerType: '地标图',
         scatterType: '渣土车辆',
-        jsonPath: './data/ChengShiZhiLi/渣土车辆.json',
-        trackStyle: 'style001',
-        trackWidth: 10,
-        objLife: 500,
-        trackDuration: 5,
-        delay: 1000,
         coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/渣土车辆.json',
         legend: {
-          name: '渣土车辆',
-          trackColor: '#ff00',
+          name: 'chezha',
+          color: '#ffff',
           iconName: 'custom-渣土车辆'
+        }
+      }
+    ],
+    // 渣土车辆: [
+    //   {
+    //     id: '轨迹图-重点车辆',
+    //     name: '轨迹图-重点车辆',
+    //     layerType: '轨迹图',
+    //     scatterType: '渣土车辆',
+    //     jsonPath: './data/ChengShiZhiLi/渣土车辆.json',
+    //     trackStyle: 'style001',
+    //     trackWidth: 10,
+    //     objLife: 500,
+    //     trackDuration: 5,
+    //     delay: 1000,
+    //     coordZ: 0,
+    //     legend: {
+    //       name: '渣土车辆',
+    //       trackColor: '#ff00',
+    //       iconName: 'custom-渣土车辆'
+    //     }
+    //   }
+    // ]
+    网格员: [
+      {
+        id: '散点-网格员',
+        layerType: '地标图',
+        scatterType: '网格员',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/网格员.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-网格员'
+        }
+      }
+    ],
+    菜市场: [
+      {
+        id: '散点-菜市场',
+        layerType: '地标图',
+        scatterType: '菜市场',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/菜市场.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-菜市场'
         }
       }
     ]

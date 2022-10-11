@@ -18,6 +18,7 @@ export default class CSZLGisData {
       case '渣土车辆':
       case '告警点位':
       case '工单点位':
+      case '菜市场':
         BaseGisData.getLocal(layer, callback)
         break
     }

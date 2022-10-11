@@ -25,15 +25,37 @@ export default {
   },
   cardNames: {
     平阳全景: {
-      cardShowLegends: ['企业', '执法人员'],
+      cardShowLegends: [],
       cardShowLayers: []
     },
-    吃在丽江: {
-      cardShowLegends: ['企业'],
-      cardShowLayers: ['排污检测站点']
+    全省GDP排名: {
+      cardShowLegends: [],
+      cardShowLayers: ['全省GDP排名柱图']
     }
   },
   allLayers: {
+    全省GDP排名柱图: [
+      {
+        id: '全省GDP排名-柱图',
+        name: '柱图',
+        layerType: '柱状图',
+        scatterType: '全省GDP排名柱图',
+        isClick: true,
+        jsonPath: './data/ZongTiTaiShi/安保人员.json',
+        coordZ: 0,
+        columnType: 'cylinder',
+        columnMinHeight: 1,
+        columnMaxHeight: 100,
+        columnAlpha: 0.6,
+        columnPaint: 'solid',
+        columnGap: 0,
+        columnWidth: 10,
+        colorMax: '#ff0000',
+        colorMin: '#ffff00',
+        labelColor: '#333',
+        labelBackgroundColor: '#ffffff00'
+      }
+    ],
     企业: [
       {
         id: '散点-车闸',

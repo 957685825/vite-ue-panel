@@ -83,9 +83,9 @@ class gisManager {
         break;
       case '气泡图':
         GisDataManager.getData(layer, (data) => {
-          data.forEach((t) => {
-            t.value = 10;
-          });
+          // data.forEach((t) => {
+          //   t.value = 10;
+          // });
           layer.mapData = this.bubble.addLayer(layer, data, cBack);
         });
         break;

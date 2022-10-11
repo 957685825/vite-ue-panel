@@ -27,7 +27,7 @@ const showLegendList = ref([])
 const initTopicLayerList = async (val = store.$state.topic) => {
   legendList.value.forEach((item) => (item.highlight = false))
   showLayerList = []
-  console.log(window.layerContral.cardNames[val].cardShowLegends)
+  console.log(window.layerContral.cardNames[val])
   showLegendList.value = window.layerContral.cardNames[val].cardShowLegends
   legendList.value.forEach(item => {
     showLegendList.value.forEach(showLayer => {

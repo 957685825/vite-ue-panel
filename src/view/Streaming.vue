@@ -25,7 +25,7 @@ onMounted(() => {
 const onSceneInit = () => {
   console.log('当前场景加载完成')
   store.setAppInstance(true)
-  // window.gisManager.camera.restrictCamera()
+  window.gisManager.camera.restrictCamera()
   window.gisManager.selectMenu(window.layerContral.defaultView)
   window.gisManager.addTopicDefault()
 }
@@ -75,7 +75,7 @@ watch(
 </template>
 <style lang="less">
 #container {
-  width: 3840px;
-  height: 1080px;
+  width: 7450px;
+  height: 2160px;
 }
 </style>

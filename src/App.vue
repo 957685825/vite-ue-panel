@@ -14,8 +14,8 @@ const store = uesStore()
 const layerContral = new LayerContral()
 // 页面分辨率
 const resolvingPower = {
-  width: 3840,
-  height: 1080
+  width: 7450,
+  height: 2160
 }
 
 /**
@@ -36,12 +36,6 @@ onMounted(() => {
     ev.preventDefault()
   }
   window.gisManager = new GisManager()
-  // window.onmessage = (e) => {
-  //   console.log(e.data)
-  //   if (e.data.addlayer === '散点') {
-  //     store.setHighLight('吃在丽江')
-  //   }
-  // }
   const hooks = new IframeHooks()
   hooks.init()
 })
@@ -90,7 +84,7 @@ const initMap = (val) => {
     <div class="legend_pos">
       <Legend></Legend>
     </div>
-    <!-- <transition
+    <transition
       name="animate__animated animate__bounce"
       enter-active-class="animate__bounceInLeft"
       leave-active-class="animate__bounceOutLeft"
@@ -116,13 +110,13 @@ const initMap = (val) => {
       mode="out-in"
     >
       <router-view name="right"></router-view>
-    </transition> -->
+    </transition>
   </div>
 </template>
 
 <style scoped lang="less">
-@appWidht: 3840px;
-@appHeight: 1080px;
+@appWidht: 7450px;
+@appHeight: 2160px;
 .gis-container {
   width: 100%;
   height: 100%;
@@ -150,8 +144,8 @@ const initMap = (val) => {
   }
   .legend_pos {
     position: absolute;
-    bottom: 20px;
-    right: 850px;
+    bottom: 120px;
+    right: 1620px;
     z-index: 100;
   }
 }

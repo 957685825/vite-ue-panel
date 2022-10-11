@@ -1,12 +1,12 @@
 import apiGet from '../Api'
 import PYQJGisData from './PYQJGisData'
 import CSZLGisData from './CSZLGisData'
+import JJYXGisData from './JJYXGisData'
 import { uesStore } from '../../store'
 export default class GisDataManager {
   static getJsonData = async (url, callback) => {
     const data = apiGet(url)
     data.then(res => {
-      console.log(res)
       callback && callback(res)
     })
   }
@@ -25,6 +25,9 @@ export default class GisDataManager {
         break
       case '城市治理':
         CSZLGisData.getData(layer, callback)
+        break
+      case '经济运行':
+        JJYXGisData.getData(layer, callback)
         break
     }
   }
