@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, reactive } from 'vue'
 import Nav from './components/common/Nav.vue'
 // import Header from '@/components/common/Header.vue'
 import Streaming from '@/view/Streaming.vue'
@@ -11,6 +11,9 @@ import { uesStore } from './store'
 import IframeHooks from './utils/hooks/iframeHooks'
 const scale = ref(0)
 const store = uesStore()
+const legendPosition = reactive({
+  bottom: '120px'
+})
 const layerContral = new LayerContral()
 // 页面分辨率
 const resolvingPower = {
@@ -59,6 +62,12 @@ const initMap = (val) => {
   window.layerContral = layerContral.modules.filter(item => item.topic === val)[0]
   window.layerContral.cameraList = layerContral.cameraList
   store.setTopic(window.layerContral.topic)
+
+  if (window.layerContral.topic !== '城市治理') {
+    legendPosition.bottom = '700px'
+  } else {
+    legendPosition.bottom = '120px'
+  }
 }
 </script>
 
@@ -81,7 +90,7 @@ const initMap = (val) => {
   >
     <Nav></Nav>
     <!-- <Header></Header> -->
-    <div class="legend_pos">
+    <div class="legend_pos" :style="legendPosition">
       <Legend></Legend>
     </div>
     <!-- <transition

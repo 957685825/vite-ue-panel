@@ -54,7 +54,7 @@ const routes = [
     }
   },
   {
-    path: '/ChengShiZhiGuan',
+    path: '/chengShiZhiGuan',
     meta: {
       cname: '城市智管'
     },
@@ -65,7 +65,7 @@ const routes = [
     }
   },
   {
-    path: '/MinShengBaoZhang',
+    path: '/mingShengBaoZhang',
     meta: {
       cname: '民生保障'
     },
@@ -76,7 +76,7 @@ const routes = [
     }
   },
   {
-    path: '/YiLiaoJianKang',
+    path: '/yiLiaoJanKang',
     meta: {
       cname: '医疗健康'
     },

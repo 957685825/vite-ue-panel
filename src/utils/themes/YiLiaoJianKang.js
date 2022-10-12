@@ -17,7 +17,7 @@ export default {
         layerType: '地标图',
         scatterType: '核酸检测点',
         coordZ: 0,
-        jsonPath: './data/ChengShiZhiLi/平阳县网格.json',
+        jsonPath: './data/YiLiaoJianKang/核酸检测点.json',
         legend: {
           name: 'chezha',
           color: '#ffff',
