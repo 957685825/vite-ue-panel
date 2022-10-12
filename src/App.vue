@@ -84,7 +84,7 @@ const initMap = (val) => {
     <div class="legend_pos">
       <Legend></Legend>
     </div>
-    <transition
+    <!-- <transition
       name="animate__animated animate__bounce"
       enter-active-class="animate__bounceInLeft"
       leave-active-class="animate__bounceOutLeft"
@@ -110,7 +110,7 @@ const initMap = (val) => {
       mode="out-in"
     >
       <router-view name="right"></router-view>
-    </transition>
+    </transition> -->
   </div>
 </template>
 

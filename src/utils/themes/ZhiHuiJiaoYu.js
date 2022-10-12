@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     智慧教育: {
-      cardShowLegends: [],
+      cardShowLegends: ['初中', '高中', '中职', '小学', '幼儿园', '特殊教育'],
       cardShowLayers: []
     }
   },

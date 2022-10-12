@@ -8,9 +8,5 @@ export default class {
       const { path } = e.data
       router.push({ path })
     }
-    // window.addEventListener('selectTopic', (data) => {
-    //   const { topic } = data
-    //   store.setTopic(topic)
-    // })
   }
 }

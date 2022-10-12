@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     医疗健康: {
-      cardShowLegends: [],
+      cardShowLegends: ['核酸检测点', '隔离酒店', '公立医疗机构', '私立医疗机构', '防控区', '封控区', '管控区'],
       cardShowLayers: []
     }
   },
@@ -79,8 +79,8 @@ export default {
         type: 'Grid01',
         areaHeight: 10,
         fillArea: 'none',
-        colorMax: '#ff0000',
-        colorMin: '#ffff00'
+        colorMax: '#12c912',
+        colorMin: '#12c912'
       }
     ],
     封控区: [
@@ -96,7 +96,7 @@ export default {
         areaHeight: 10,
         fillArea: 'none',
         colorMax: '#ff0000',
-        colorMin: '#ffff00'
+        colorMin: '#ff0000'
       }
     ],
     管控区: [

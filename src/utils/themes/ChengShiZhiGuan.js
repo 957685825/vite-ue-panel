@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     城市智管: {
-      cardShowLegends: [],
+      cardShowLegends: ['水库', '降雨检测点', '加油站', '露天矿山数', '烟花爆竹经营点', '化工及危化品企业', '非煤矿山', '自来水厂', '城市部件'],
       cardShowLayers: []
     }
   },

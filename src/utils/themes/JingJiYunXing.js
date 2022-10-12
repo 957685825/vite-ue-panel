@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     经济运行: {
-      cardShowLegends: [],
+      cardShowLegends: ['公交站点', '客运站点', '104国道交通流量', '视频监控', '客运站布局', '货运站布局'],
       cardShowLayers: []
     }
   },

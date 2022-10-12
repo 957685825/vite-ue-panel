@@ -32,14 +32,14 @@ export default new Map([
   [
     '经济运行',
     {
-      centerCoord: [120.55270365835, 27.6007433084],
+      centerCoord: [120.54891591196, 27.61488790674],
       coordType: 0,
       coordTypeZ: 0,
       coordZ: 10,
-      distance: 2123,
+      distance: 4600,
       fov: 90,
-      heading: 85,
-      pitch: 16,
+      heading: 56,
+      pitch: 19,
       fly: true,
       duration: 1
     }
@@ -77,14 +77,14 @@ export default new Map([
   [
     '医疗健康',
     {
-      centerCoord: [120.55872016988, 27.60501155333],
+      centerCoord: [120.55281136635, 27.60481484826],
       coordType: 0,
       coordTypeZ: 0,
       coordZ: 10,
-      distance: 2123,
+      distance: 6126,
       fov: 90,
-      heading: 275,
-      pitch: 21,
+      heading: 250,
+      pitch: 11,
       fly: true,
       duration: 1
     }
@@ -98,8 +98,8 @@ export default new Map([
       coordZ: 10,
       distance: 2123,
       fov: 90,
-      heading: 38,
-      pitch: 21,
+      heading: 11,
+      pitch: 14,
       fly: true,
       duration: 1
     }

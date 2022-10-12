@@ -6,7 +6,7 @@ export default {
   },
   cardNames: {
     民生保障: {
-      cardShowLegends: [],
+      cardShowLegends: ['公办养老机构', '私营养老机构', '低保户分布', '特困人员分布'],
       cardShowLayers: []
     }
   },

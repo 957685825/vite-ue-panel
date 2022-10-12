@@ -7,11 +7,11 @@ export default class CSZLGisData {
       case '公交车':
         BaseGisData.getTrailData(layer, callback)
         break
-      case '公交站点':
-      case '客运站点':
       case '104国道交通流量':
         BaseGisData.getPathData(layer, callback)
         break
+      case '公交站点':
+      case '客运站点':
       case '客运站布局':
       case '货运站布局':
       case '视频监控':

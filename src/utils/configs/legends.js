@@ -136,7 +136,7 @@ export default {
       highlight: false
     },
     {
-      name: '烟花爆竹经营点数',
+      name: '烟花爆竹经营点',
       imgUrl: './img/legend/工单点位.png',
       highlight: false
     },
