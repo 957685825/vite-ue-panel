@@ -25,12 +25,11 @@ const showLegendList = ref([])
 
 // 初始化当前主题的图层
 const initTopicLayerList = async (val = store.$state.topic) => {
-  legendList.value.forEach((item) => (item.highlight = false))
+  legendList?.value?.forEach((item) => (item.highlight = false))
   showLayerList = []
-  console.log(window.layerContral.cardNames[val])
   showLegendList.value = window.layerContral.cardNames[val].cardShowLegends
-  legendList.value.forEach(item => {
-    showLegendList.value.forEach(showLayer => {
+  legendList?.value?.forEach(item => {
+    showLegendList?.value?.forEach(showLayer => {
       if (item.name === showLayer) {
         item.highlight = true
         ctrlLayer(showLayer, true)
@@ -78,8 +77,8 @@ const InitLayer = async () => {
 const cardChange = async (cardName) => {
   const cardShowLayers = window.layerContral.cardNames[cardName].cardShowLayers
   if (cardShowLayers) {
-    legendList.value.forEach(item => {
-      cardShowLayers.forEach(showLayer => {
+    legendList?.value?.forEach(item => {
+      cardShowLayers?.forEach(showLayer => {
         if (item.name === showLayer) {
           ctrlLayer(showLayer, true)
         }
@@ -121,6 +120,7 @@ watch(
             initTopicLayerList()
             cardChange(store.$state.topic)
           })
+          window.gisManager.camera.setCamera(window.layerContral.cameraList.get(store.$state.topic))
           console.log('初始化图层')
         }
       }

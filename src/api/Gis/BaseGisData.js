@@ -163,4 +163,25 @@ export default class BaseGisData {
       callback && callback(data)
     })
   }
+
+  /** 获取数值区域图数据 */
+  static getNumAreaData (layer, callback) {
+    const res = apiGet(layer.jsonPath)
+    res.then((t) => {
+      const data = { areas: [], data: [] }
+      t.forEach((item) => {
+        const { name, points, value } = item
+        const area = { name: name, points: [] }
+        points.forEach((item) => {
+          area.points.push({ coord: item, coordZ: layer.coordZ || alt || 0 })
+        })
+        data.areas.push(area)
+        data.data.push({
+          areaName: name,
+          value: value
+        })
+      })
+      callback && callback(data)
+    })
+  }
 }

@@ -63,6 +63,39 @@ const routes = [
       center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
       right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
     }
+  },
+  {
+    path: '/MinShengBaoZhang',
+    meta: {
+      cname: '民生保障'
+    },
+    components: {
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
+    }
+  },
+  {
+    path: '/YiLiaoJianKang',
+    meta: {
+      cname: '医疗健康'
+    },
+    components: {
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
+    }
+  },
+  {
+    path: '/ZhiHuiJiaoYu',
+    meta: {
+      cname: '智慧教育'
+    },
+    components: {
+      left: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/left.vue'),
+      center: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/center.vue'),
+      right: () => import(/* webpackChunkName: "ChengShiZhiLi" */ '../view/HangYeGuanLi/right.vue')
+    }
   }
 ]
 

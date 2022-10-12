@@ -116,13 +116,139 @@ export default {
   ],
   城市智管: [
     {
-      name: '公交车',
+      name: '水库',
       imgUrl: './img/legend/告警点位.png',
       highlight: false
     },
     {
-      name: '公交站点',
+      name: '降雨监测点',
       imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '加油站',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '露天矿山数',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '烟花爆竹经营点数',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '化工及危化品企业',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '非煤矿山',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '自来水厂',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '城市部件',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    }
+  ],
+  民生保障: [
+    {
+      name: '公办养老机构',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    },
+    {
+      name: '私营养老机构',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    },
+    {
+      name: '低保户分布',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    },
+    {
+      name: '特困人员分布',
+      imgUrl: './img/legend/城市部件.png',
+      highlight: false
+    }
+  ],
+  医疗健康: [
+    {
+      name: '核酸检测点',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '隔离酒店',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '公立医疗机构',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '私立医疗机构',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '防控区',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '封控区',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    },
+    {
+      name: '管控区',
+      imgUrl: './img/legend/工单点位.png',
+      highlight: false
+    }
+  ],
+  智慧教育: [
+    {
+      name: '初中',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '高中',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '中职',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '小学',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '幼儿园',
+      imgUrl: './img/legend/菜市场.png',
+      highlight: false
+    },
+    {
+      name: '特殊教育',
+      imgUrl: './img/legend/菜市场.png',
       highlight: false
     }
   ]

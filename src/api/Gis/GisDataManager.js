@@ -2,6 +2,10 @@ import apiGet from '../Api'
 import PYQJGisData from './PYQJGisData'
 import CSZLGisData from './CSZLGisData'
 import JJYXGisData from './JJYXGisData'
+import CSZGGisData from './CSZGGisData'
+import MSBZGisData from './MSBZGisData'
+import YLJKGisData from './YLJKGisData'
+import ZHJYGisData from './ZHJYGisData'
 import { uesStore } from '../../store'
 export default class GisDataManager {
   static getJsonData = async (url, callback) => {
@@ -28,6 +32,18 @@ export default class GisDataManager {
         break
       case '经济运行':
         JJYXGisData.getData(layer, callback)
+        break
+      case '城市智管':
+        CSZGGisData.getData(layer, callback)
+        break
+      case '民生保障':
+        MSBZGisData.getData(layer, callback)
+        break
+      case '医疗健康':
+        YLJKGisData.getData(layer, callback)
+        break
+      case '智慧教育':
+        ZHJYGisData.getData(layer, callback)
         break
     }
   }

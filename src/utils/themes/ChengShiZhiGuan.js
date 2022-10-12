@@ -11,33 +11,13 @@ export default {
     }
   },
   allLayers: {
-    // 公交车: [
-    //   {
-    //     id: '轨迹图-重点车辆',
-    //     name: '轨迹图-重点车辆',
-    //     layerType: '轨迹图',
-    //     scatterType: '公交车',
-    //     jsonPath: './data/JingJiYunXing/公交车.json',
-    //     trackStyle: 'style001',
-    //     trackWidth: 10,
-    //     objLife: 500,
-    //     trackDuration: 5,
-    //     delay: 1000,
-    //     coordZ: 0,
-    //     legend: {
-    //       name: '公交车',
-    //       trackColor: '#ff00',
-    //       iconName: 'custom-渣土车辆'
-    //     }
-    //   }
-    // ],
-    公交站点: [
+    水库: [
       {
-        id: '散点-公交站点',
+        id: '散点-水库',
         layerType: '地标图',
-        scatterType: '公交站点',
+        scatterType: '水库',
         coordZ: 0,
-        jsonPath: './data/JingJiYunXing/公交站.json',
+        jsonPath: './data/ChengShiZhiLi/平阳县网格.json',
         legend: {
           name: 'chezha',
           color: '#ffff',
@@ -45,39 +25,95 @@ export default {
         }
       }
     ],
-    客运站点: [
+    降雨监测点: [
       {
-        id: '散点-客运站',
+        id: '散点-降雨监测点',
         layerType: '地标图',
-        scatterType: '客运站点',
+        scatterType: '降雨监测点',
         coordZ: 0,
-        jsonPath: './data/JingJiYunXing/客运站.json',
+        jsonPath: './data/ChengShiZhiLi/街道网格.json',
         legend: {
           name: 'chezha',
           color: '#ffff',
-          iconName: 'custom-平阳县网格'
+          iconName: 'custom-街道网格'
         }
       }
     ],
-    '104国道交通流量': [
+    加油站: [
       {
-        id: '路径-104国道交通流量',
-        name: '路径-104国道交通流量',
-        layerType: '路径',
-        scatterType: '104国道交通流量',
+        id: '散点-加油站',
+        layerType: '地标图',
+        scatterType: '加油站',
         coordZ: 0,
-        jsonPath: './data/JingJiYunXing/线路.json',
-        type: 'Arrow02',
-        color: '#00B285',
-        colorPass: '#00B285',
-        width: 20
+        jsonPath: './data/ChengShiZhiLi/村社区网格.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-村社网格'
+        }
       }
     ],
-    视频监控: [
+    露天矿山数: [
       {
-        id: '散点-视频监控-经济运行',
+        id: '散点-露天矿山数',
         layerType: '地标图',
-        scatterType: '视频监控',
+        scatterType: '露天矿山数',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/全科网格.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-全科网格'
+        }
+      }
+    ],
+    烟花爆竹经营点: [
+      {
+        id: '散点-烟花爆竹经营点',
+        layerType: '地标图',
+        scatterType: '烟花爆竹经营点',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/微网格.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-微网格'
+        }
+      }
+    ],
+    化工及危化品企业: [
+      {
+        id: '散点-化工及危化品企业',
+        layerType: '地标图',
+        scatterType: '化工及危化品企业',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/菜市场.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-菜市场'
+        }
+      }
+    ],
+    非煤矿山: [
+      {
+        id: '散点-非煤矿山',
+        layerType: '地标图',
+        scatterType: '非煤矿山',
+        coordZ: 0,
+        jsonPath: './data/ChengShiZhiLi/无人机.json',
+        legend: {
+          name: 'chezha',
+          color: '#ffff',
+          iconName: 'custom-无人机'
+        }
+      }
+    ],
+    自来水厂: [
+      {
+        id: '散点-自来水厂',
+        layerType: '地标图',
+        scatterType: '自来水厂',
         coordZ: 0,
         jsonPath: './data/ChengShiZhiLi/视频监控.json',
         legend: {
@@ -87,31 +123,17 @@ export default {
         }
       }
     ],
-    客运站布局: [
+    城市部件: [
       {
-        id: '散点-客运站布局-经济运行',
+        id: '散点-城市部件',
         layerType: '地标图',
-        scatterType: '客运站布局',
+        scatterType: '城市部件',
         coordZ: 0,
-        jsonPath: './data/ChengShiZhiLi/视频监控.json',
+        jsonPath: './data/ChengShiZhiLi/城市部件.json',
         legend: {
           name: 'chezha',
           color: '#ffff',
-          iconName: 'custom-视频监控'
-        }
-      }
-    ],
-    货运站布局: [
-      {
-        id: '散点-货运站布局-经济运行',
-        layerType: '地标图',
-        scatterType: '货运站布局',
-        coordZ: 0,
-        jsonPath: './data/ChengShiZhiLi/视频监控.json',
-        legend: {
-          name: 'chezha',
-          color: '#ffff',
-          iconName: 'custom-视频监控'
+          iconName: 'custom-城市部件'
         }
       }
     ]
